@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency HotLine</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Hotline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    
+
+<body class="bg-gray-100">
+  <header class="bg-white p-4 shadow-md flex justify-between items-center sticky top-0 z-70">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo.png" alt="Logo" class="w-7 h-8 rounded-full">
+      <h1 class="text-xl font-bold text-gray-800"><b>Emergency Service</b></h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <div class="heart-box flex items-center space-x-2 text-gray-700 px-4 py-2 rounded-full">
+        <img src="assets/heart.png" alt="Heart" class="w-4 h-4">
+        <span id="heart-count" class="font-semibold text-gray-800">0</span>
+      </div>
+      <div class="coin-box flex items-center space-x-2 text-gray-700 px-4 py-2 rounded-full">
+        <img src="assets/coin.png" alt="Coin" class="w-7 h-7">
+        <span id="coin-count" class="font-semibold text-gray-800">80</span>
+      </div>
+      <div class="copy-box flex items-center space-x-2 text-white px-4 py-2 rounded-full">
+        <i class="fa-solid fa-copy text-white"></i>
+        <span id="copy-count-text" class="font-semibold">0 Copy</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero flex flex-col items-center justify-center p-8 text-white h-auto md:h-96 bg-gradient-to-r from-green-900 via-green-700 to-green-900">
+    <img src="assets/logo-dark.png" alt="Hero Logo" class="w-24 h-24 mb-4 rounded-full">
+    <h2 class="hero-title">Emergency Hotline Services</h2>
+    <p class="hero-subtitle text-lg md:text-xl text-center mt-4 max-w-3xl">
+      Government Emergency Services at Your Fingerti A Project by Government of the People's Republic of Bangladesh
+    </p>
+  </section>
+
+  <main class="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8"></main>
+  <section class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="card-container" class="contents"></div>
+  </section>
+  <aside class="lg:col-span-1 space-y-8">
+    <section class="bg-white p-4 rounded-lg shadow-md">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-bold flex items-center">
+          <i class="fas fa-history mr-2"></i>
+          Call History
+        </h3>
+        <button id="clear-history-btn" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
+          Clear History
+        </button>
+      </div>
+      <ul id="history-list" class="space-y-2 text-gray-700"></ul>
+    </section>
+  </aside>
+  </main>
+
+  <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white p-6 rounded-lg shadow-xl text-center max-w-sm w-full">
+      <p id="modal-message" class="text-lg mb-4"></p>
+      <button id="modal-close-btn" class="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700">Ok</button>
+    </div>
+  </div>
+
+  <script src="srpt.js"></script>
 </body>
 </html>

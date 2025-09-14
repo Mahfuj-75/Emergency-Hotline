@@ -1,3 +1,26 @@
-.{
-    
+.heart-box {
+  background: rgba(65, 255, 106, 0.472);
+}
+
+.coin-box {
+  background: rgba(65, 255, 106, 0.618);
+}
+
+.copy-box {
+  background: rgb(9, 123, 51);
+}
+.hero-title {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: center;
 }
